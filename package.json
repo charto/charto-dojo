@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "build:mst-dstore": "tsc -p packages/node_modules/mst-dstore/src && tsc -p packages/node_modules/mst-dstore/src/ts-amd.json && alleamd mst-dstore",
+    "build:phosphor-dgrid": "tsc -p packages/node_modules/phosphor-dgrid/src && tsc -p packages/node_modules/phosphor-dgrid/src/ts-amd.json && alleamd phosphor-dgrid",
+    "build": "npm run build:mst-dstore && npm run build:phosphor-dgrid",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "charto-loader": "^0.1.1",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "@phosphor/widgets": "^1.5.0",
+    "classy-mst": "~1.0.1",
+    "dgrid": "^1.2.1",
+    "dojo": "^1.13.0",
+    "dojo-dstore": "^1.1.2",
+    "dojo-typings": "github:dojo/typings#master",
+    "mobx": "^4.2.1",
+    "mobx-state-tree": "^2.0.4"
+  }
+}
